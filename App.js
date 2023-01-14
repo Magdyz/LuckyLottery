@@ -1,20 +1,49 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
+import EuroMillions from './src/EuroMillions'
+import Lotto from './src/Lotto';
+import SetForLife from './src/SetForLife';
+import { LinearGradient } from 'expo-linear-gradient';
+import TitleBox from './src/TitleBox';
 
-export default function App() {
+const App = () => {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    <View style={styles.container} >
+      <LinearGradient 
+        colors={['#DD403A', '#B38CB4']}
+        start={{
+          x: 0,
+          y: 0
+        }}
+        end={{
+          x: 1,
+          y: 1
+        }}
+        style={styles.box} >
+      <TitleBox></TitleBox>
+      <EuroMillions></EuroMillions>
+      <Lotto></Lotto>
+      <SetForLife></SetForLife>
+    </LinearGradient>
+    </View >
+    );
+  };
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
+    /*backgroundColor: '#f5f5dc',*/
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
-});
+  box: {
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center'
+
+  }
+};
+
+export default App;

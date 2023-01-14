@@ -2,7 +2,7 @@
   "expo": {
     "name": "LuckyLottery",
     "slug": "LuckyLottery",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.magzz.LuckyLottery"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f55be239-321f-481b-a1c3-9d35680a9040"
+      }
     }
   }
 }
