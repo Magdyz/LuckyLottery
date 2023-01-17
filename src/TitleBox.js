@@ -2,12 +2,12 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 
-const TitleBox = () => {
+const TitleBox = (props) => {
 
 
     return (
             <View style={styles.backgroundBox}>
-                <Text style={styles.text}>Lucky Generator</Text>
+                <Text style={styles.text}>{props.title}</Text>
             </View>
     );
 };
@@ -16,22 +16,21 @@ const styles = {
 
     text: {
         fontSize: 35,
-        color: '#F5BE51',
-        fontWeight: "bold"
+        fontWeight: "bold",
+        color: '#ffd60a'
 
     },
 
     backgroundBox:{
         
         margin: 15, 
-        backgroundColor: '#17255A', 
+        backgroundColor: '#03045e', 
         display: 'flex', 
         flexDirection: 'column', 
         alignItems: 'center', 
         justifyContent: 'center', 
-        height: 70, 
-        width: 300, 
-        borderRadius: 67
+        height: '10%', 
+        width: '100%', 
     }
 }
 

@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-const SetForLife = () => {
+const ButtonFunction = (props) => {
   // Create state variables to store the generated numbers
   const [mainNumbers, setMainNumbers] = useState([]);
   const [luckyStars, setLuckyStars] = useState([]);
+  let firstNumbers = props.firstNumbers;        
+  let firstNumberOfTimes = props.firstNumberOfTimes;
+  let secondNumberOfTimes = props.secondNumberOfTimes;
+  let secondNumber = props.secondNumber;
 
   // Function to generate the numbers and update the state variables
   const generateNumbers = () => {
@@ -13,16 +17,16 @@ const SetForLife = () => {
     let newLuckyStars = [];
 
     // Generate 5 unique main numbers between 1 and 50
-    while (newMainNumbers.length < 5) {
-      let randomNumber = Math.floor(Math.random() * 47) + 1;
+    while (newMainNumbers.length < firstNumberOfTimes) {
+      let randomNumber = Math.floor(Math.random() * firstNumbers) + 1;
       if (!newMainNumbers.includes(randomNumber)) {
         newMainNumbers.push(randomNumber);
       }
     }
 
     // Generate 2 unique lucky stars between 1 and 12
-    while (newLuckyStars.length < 1) {
-      let randomNumber = Math.floor(Math.random() * 10) + 1;
+    while (newLuckyStars.length < secondNumberOfTimes) {
+      let randomNumber = Math.floor(Math.random() * secondNumber) + 1;
       if (!newLuckyStars.includes(randomNumber)) {
         newLuckyStars.push(randomNumber);
       }
@@ -52,10 +56,10 @@ const SetForLife = () => {
       </View>
 
       <View style={{ height: 20 }}></View>
-
+      
        {/* Button to trigger the number generation */}
        <TouchableOpacity onPress={generateNumbers}>
-        <Text style={styles.button}>SETFORLIFE</Text>
+        <Text style={styles.button}>{props.buttonTitle}</Text>
       </TouchableOpacity>
 
     </View>
@@ -63,64 +67,66 @@ const SetForLife = () => {
 };
 
 const styles = StyleSheet.create({
-  numbersContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  numberCircle: {
-    width: 40,
-    height: 40,
-    borderRadius: 25,
-    backgroundColor: 'white', 
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  numberText: {
-    color: '#DD403A',
-    fontWeight: 'bold',
-    fontSize: 20,
-  },
 
-  backgroundBox:{
-        
-    margin: 15, 
-    backgroundColor: '#F5BE51', 
-    display: 'flex', 
-    flexDirection: 'column', 
-    alignItems: 'center', 
-    justifyContent: 'center', 
-    height: 180, 
-    width: 320, 
-    borderRadius: 67,
-},
-
-button: {
-    paddingTop: 14,
-    backgroundColor: '#DD403A',
-    height: 43,
-    width: 100,
-    textAlign: 'center',
-    borderRadius: 67,
-    fontSize: 11,
-    color: 'white',
-    fontWeight: "bold",
-},
-
-luckyNumberText: {
-    color: '#F5BE51',
-    fontWeight: 'bold',
-    fontSize: 20,
+    numbersContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+    numberCircle: {
+      width: 45,
+      height: 45,
+      borderRadius: 25,
+      backgroundColor: 'white', 
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    numberText: {
+      color: '#DD403A',
+      fontWeight: 'bold',
+      fontSize: 20,
+    },
+  
+    backgroundBox:{
+          
+      margin: 15, 
+      backgroundColor: '#F5BE51', 
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      height: 190, 
+      width: 340, 
+      borderRadius: 67,
   },
   
-luckyNumberCircle: {
+  button: {
+      paddingTop: 14,
+      backgroundColor: '#03045e',
+      height: 50,
+      width: 130,
+      textAlign: 'center',
+      borderRadius: 67,
+      fontSize: 14,
+      color: '#ffd60a',
+      fontWeight: "bold",
+  },
+  
+  luckyNumberText: {
+      color: '#ffd60a',
+      fontWeight: 'bold',
+      fontSize: 20,
+    },
+    
+  luckyNumberCircle: {
+  
+      width: 45,
+      height: 45,
+      borderRadius: 25,
+      backgroundColor: '#03045e', 
+      alignItems: 'center',
+      justifyContent: 'center',
+  }
+  });
 
-    width: 40,
-    height: 40,
-    borderRadius: 25,
-    backgroundColor: '#17255A', 
-    alignItems: 'center',
-    justifyContent: 'center',
-}
-});
 
-export default SetForLife;
+export default ButtonFunction;

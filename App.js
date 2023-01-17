@@ -1,42 +1,43 @@
 import React from 'react';
-import { View } from 'react-native';
-import EuroMillions from './src/EuroMillions'
-import Lotto from './src/Lotto';
-import SetForLife from './src/SetForLife';
+import { View, ScrollView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import TitleBox from './src/TitleBox';
+import ButtonFunction from './src/ButtonFunction';
+
 
 const App = () => {
+  
 
   return (
     <View style={styles.container} >
       <LinearGradient 
-        colors={['#DD403A', '#B38CB4']}
+        colors={['#a2d2ff', '#f1faee']}
         start={{
-          x: 0,
+          x: 1,
           y: 0
         }}
         end={{
-          x: 1,
+          x: 0,
           y: 1
         }}
-        style={styles.box} >
-      <TitleBox></TitleBox>
-      <EuroMillions></EuroMillions>
-      <Lotto></Lotto>
-      <SetForLife></SetForLife>
+        style={styles.box} >      
+            
+      <TitleBox title = 'Lucky Generator' ></TitleBox>
+
+      <ScrollView >
+      <ButtonFunction buttonTitle = 'EUROMILLIONS' firstNumberOfTimes = '5' firstNumbers =  '50' secondNumberOfTimes = '2' secondNumber = '12'/>
+      <ButtonFunction buttonTitle = 'LOTTO' firstNumberOfTimes = '6' firstNumbers =  '59' secondNumberOfTimes = '0' secondNumber = '0'/>
+      <ButtonFunction buttonTitle = 'SETFORLIFE' firstNumberOfTimes = '5' firstNumbers =  '47' secondNumberOfTimes = '1' secondNumber = '10'/>
+      </ScrollView>
+
+
     </LinearGradient>
     </View >
     );
   };
 
 const styles = {
-  container: {
-    /*backgroundColor: '#f5f5dc',*/
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
+
   box: {
     width: '100%',
     height: '100%',
