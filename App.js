@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView } from 'react-native';
+import { View, ScrollView, SafeAreaView, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import TitleBox from './src/TitleBox';
 import ButtonFunction from './src/ButtonFunction';
@@ -9,9 +9,9 @@ const App = () => {
 
 
   return (
-    <View style={styles.container} >
+    <View >
       <LinearGradient
-        colors={['#a2d2ff', '#f1faee']}
+        colors={['#f1faee', '#a2d2ff']}
         start={{
           x: 1,
           y: 0
@@ -23,11 +23,11 @@ const App = () => {
         style={styles.box} >
 
         <TitleBox title='Lucky Generator' ></TitleBox>
-        <ScrollView >
+        <SafeAreaView >
           <ButtonFunction buttonTitle='EUROMILLIONS' firstNumberOfTimes='5' firstNumbers='50' secondNumberOfTimes='2' secondNumber='12' />
           <ButtonFunction buttonTitle='LOTTO' firstNumberOfTimes='6' firstNumbers='59' secondNumberOfTimes='0' secondNumber='0' />
-          <ButtonFunction buttonTitle='SETFORLIFE' firstNumberOfTimes='5' firstNumbers='47' secondNumberOfTimes='1' secondNumber='10' />
-        </ScrollView>
+          <ButtonFunction buttonTitle='SET FOR LIFE' firstNumberOfTimes='5' firstNumbers='47' secondNumberOfTimes='1' secondNumber='10' />
+        </SafeAreaView>
 
 
 
@@ -36,15 +36,16 @@ const App = () => {
   );
 };
 
-const styles = {
+const styles = StyleSheet.create({
 
   box: {
     width: '100%',
     height: '100%',
     alignItems: 'center',
-    justifyContent: 'center',
+    // justifyContent: 'center',
 
   }
-};
+
+});
 
 export default App;

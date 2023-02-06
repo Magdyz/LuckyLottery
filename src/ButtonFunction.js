@@ -102,19 +102,19 @@ const styles = StyleSheet.create({
     numberText: {
         color: '#DD403A',
         fontWeight: 'bold',
-        fontSize: 20,
+        fontSize: 22,
 
     },
 
     backgroundBox: {
 
-        margin: 15,
-        backgroundColor: '#F5BE51',
+        margin: 7,
+        backgroundColor: '#ADD0EA',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: 190,
+        height: 200,
         width: 350,
         borderRadius: 67,
         shadowColor: 'black',
@@ -126,21 +126,26 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        paddingTop: 14,
-        backgroundColor: '#03045e',
-        height: 50,
-        width: 130,
+        paddingTop: 25,
+        backgroundColor: '#F5BE51',
+        height: 80,
+        width: 190,
         textAlign: 'center',
         borderRadius: 67,
-        fontSize: 14,
-        color: '#ffd60a',
-        fontWeight: "bold",
+        fontSize: 24,
+        color: '#241715',
+        fontWeight: "600",
+        shadowColor: 'white',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.8,
+        shadowRadius: 2,
+        elevation: 3
     },
 
     luckyNumberText: {
         color: '#ffd60a',
         fontWeight: 'bold',
-        fontSize: 20,
+        fontSize: 22,
     },
 
     luckyNumberCircle: {

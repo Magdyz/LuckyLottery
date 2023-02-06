@@ -23,8 +23,9 @@ const styles = StyleSheet.create({
         fontSize: 40,
         fontWeight: "bold",
         color: '#03045e',
+        opacity: 0.8,
         textShadowColor: 'white',
-        textShadowOffset: { width: 0, height: 0.1 },
+        textShadowOffset: { width: 0.1, height: 0.1 },
         textShadowRadius: 2,
 
 
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
 
     backgroundBox: {
 
-        top: 10,
+        top: 1,
         margin: 15,
         marginLeft: 1,
         display: 'flex',
