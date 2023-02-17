@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const ButtonFunction = (props) => {
 
@@ -70,7 +71,20 @@ const ButtonFunction = (props) => {
             {/* Button to trigger the number generation */}
 
             <TouchableOpacity onPress={generateNumbers}>
-                <Text style={styles.button}>{props.buttonTitle}</Text>
+            <LinearGradient
+        colors={['#ebdb65','#e8e2ba','#ebdb65']}
+        start={{
+          x: 1,
+          y: 0
+        }}
+        end={{
+          x: 0,
+          y: 1
+        }}
+        style={styles.button} >
+                <Text style={styles.buttonText}>{props.buttonTitle}</Text>
+                </LinearGradient>
+
             </TouchableOpacity>
 
         </View>
@@ -125,18 +139,24 @@ const styles = StyleSheet.create({
 
     },
 
-    button: {
-        paddingTop: 25,
-        backgroundColor: '#F5BE51',
+    buttonText: {
+
         height: 80,
-        width: 190,
+        width: 192,
         textAlign: 'center',
-        borderRadius: 67,
         fontSize: 24,
-        color: '#241715',
         fontWeight: "600",
-        shadowColor: 'white',
-        shadowOffset: { width: 0, height: 2 },
+        fontFamily: 'Roboto'
+
+    },    
+    
+    button: {
+        paddingTop: 24,
+        height: 80,
+        width: 192,
+        borderRadius: 67,
+        shadowColor: 'black',
+        shadowOffset: { width: 0.5, height: 2 },
         shadowOpacity: 0.8,
         shadowRadius: 2,
         elevation: 3

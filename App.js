@@ -1,15 +1,14 @@
 import React from 'react';
-import { View, ScrollView, SafeAreaView, StyleSheet } from 'react-native';
+import { View, SafeAreaView, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import TitleBox from './src/TitleBox';
 import ButtonFunction from './src/ButtonFunction';
 
+
 const App = () => {
 
-
-
   return (
-    <View >
+    <SafeAreaView  style={styles.mainContainer}>
       <LinearGradient
         colors={['#f1faee', '#a2d2ff']}
         start={{
@@ -21,18 +20,17 @@ const App = () => {
           y: 1
         }}
         style={styles.box} >
-
         <TitleBox title='Lucky Generator' ></TitleBox>
-        <SafeAreaView >
+        <View >
           <ButtonFunction buttonTitle='EUROMILLIONS' firstNumberOfTimes='5' firstNumbers='50' secondNumberOfTimes='2' secondNumber='12' />
           <ButtonFunction buttonTitle='LOTTO' firstNumberOfTimes='6' firstNumbers='59' secondNumberOfTimes='0' secondNumber='0' />
           <ButtonFunction buttonTitle='SET FOR LIFE' firstNumberOfTimes='5' firstNumbers='47' secondNumberOfTimes='1' secondNumber='10' />
-        </SafeAreaView>
+        </View>
 
 
 
       </LinearGradient>
-    </View >
+    </SafeAreaView >
   );
 };
 
@@ -42,8 +40,9 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     alignItems: 'center',
-    // justifyContent: 'center',
-
+  },
+  mainContainer: {
+    top: 10
   }
 
 });
