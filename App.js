@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, SafeAreaView, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import TitleBox from './src/TitleBox';
 import ButtonFunction from './src/ButtonFunction';
@@ -8,7 +8,7 @@ import ButtonFunction from './src/ButtonFunction';
 const App = () => {
 
   return (
-    <SafeAreaView  style={styles.mainContainer}>
+    <View  style={styles.mainContainer}>
       <LinearGradient
         colors={['#f1faee', '#a2d2ff']}
         start={{
@@ -30,7 +30,7 @@ const App = () => {
 
 
       </LinearGradient>
-    </SafeAreaView >
+    </View >
   );
 };
 
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   mainContainer: {
-    top: 10
+    
   }
 
 });
