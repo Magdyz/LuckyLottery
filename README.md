@@ -1,6 +1,8 @@
 # Lottery Number Generator - React Native App
 
 ![App Logo](https://github.com/Magdyz/LuckyLottery/blob/main/assets/icon.png)
+<img src="https://raw.githubusercontent.com/Magdyz/LuckyLottery/main/assets/icon.png" width="200" height="200">
+
 
 This React Native application serves as a Lottery Number Generator, providing users with a simple and intuitive interface to generate random lottery numbers. The project not only focuses on the functionality but also adheres to Android Play Store requirements for a seamless user experience.
 
