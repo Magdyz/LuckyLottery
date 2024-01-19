@@ -29,12 +29,12 @@ To run the app locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/lottery-number-generator.git
+   git clone https://github.com/Magdyz/LuckyLottery.git
    ```
 
 2. Install dependencies:
    ```bash
-   cd lottery-number-generator
+   cd LuckyLottery
    npm install
    ```
 
