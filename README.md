@@ -1,4 +1,4 @@
-# Lottery Number Generator - React Native App
+# Lottery Number Generator App - React Native App
 
 <img src="https://raw.githubusercontent.com/Magdyz/LuckyLottery/main/assets/icon.png" width="200" height="200">
 
@@ -8,7 +8,7 @@
 [![CSS](https://img.shields.io/badge/-CSS-blueviolet)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![Android App Store](https://img.shields.io/badge/-Android_App_Store-green)](https://play.google.com/store)
 
-### News Project link
+### Lottery Number Generator App
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.magzz.LuckyLottery)](https://play.google.com/store/apps/details?id=com.magzz.LuckyLottery)
 
 
