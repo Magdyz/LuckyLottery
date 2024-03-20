@@ -3,6 +3,14 @@
 <img src="https://raw.githubusercontent.com/Magdyz/LuckyLottery/main/assets/icon.png" width="200" height="200">
 
 ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow)
+[![React Native](https://img.shields.io/badge/-React_Native-61dafb)](https://reactnative.dev/)
+[![HTML](https://img.shields.io/badge/-HTML-orange)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/-CSS-blueviolet)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Android App Store](https://img.shields.io/badge/-Android_App_Store-green)](https://play.google.com/store)
+
+### News Project link
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.magzz.LuckyLottery)](https://play.google.com/store/apps/details?id=com.magzz.LuckyLottery)
+
 
 This React Native application serves as a Lottery Number Generator, providing users with a simple and intuitive interface to generate random lottery numbers. The project not only focuses on the functionality but also adheres to Android Play Store requirements for a seamless user experience.
 
